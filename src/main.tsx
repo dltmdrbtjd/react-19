@@ -1,9 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App.tsx";
+import "./styles/index.css";
 import { BrowserRouter, Routes, Route } from "react-router";
-import Transition from "./Transition.tsx";
+import App from "./pages/App.tsx";
+import Transition from "./pages/Transition.tsx";
 
 // Before
 // import {render} from 'react-dom';

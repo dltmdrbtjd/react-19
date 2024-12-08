@@ -1,5 +1,5 @@
 import { useState, useTransition } from "react";
-import { updateName } from "./services/api/user";
+import { updateName } from "../services/api/user";
 
 // Transition Handling
 function Action() {
