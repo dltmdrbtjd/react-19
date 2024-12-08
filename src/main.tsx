@@ -2,7 +2,14 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
+import { BrowserRouter, Routes, Route } from "react-router";
+import Action from "./Action.tsx";
 
+// Before
+// import {render} from 'react-dom';
+// render(<App />, document.getElementById('root'));
+
+// After createRoot
 createRoot(document.getElementById("root")!, {
   onCaughtError(error, errorInfo) {
     console.error("Caught error:", error, errorInfo);
@@ -14,6 +21,19 @@ createRoot(document.getElementById("root")!, {
   },
 }).render(
   <StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/action" element={<Action />} />
+      </Routes>
+    </BrowserRouter>
   </StrictMode>
 );
+
+// Before hydrate
+// import {hydrate} from 'react-dom';
+// hydrate(<App />, document.getElementById('root'));
+
+// After hydrateRoot
+// import { hydrateRoot } from "react-dom/client";
+// hydrateRoot(document.getElementById("root"), <App />);
