@@ -3,9 +3,10 @@ import "../styles/App.css";
 
 function App() {
   return (
-    <>
-      <NavLink to="/transition">Go to Transition Page</NavLink>
-    </>
+    <nav className="nav">
+      <NavLink to="/transition">Go to useTransition Case</NavLink>
+      <NavLink to="/action-state">Go to useActionState Case</NavLink>
+    </nav>
   );
 }
 

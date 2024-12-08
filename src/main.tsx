@@ -4,6 +4,7 @@ import "./styles/index.css";
 import { BrowserRouter, Routes, Route } from "react-router";
 import App from "./pages/App.tsx";
 import Transition from "./pages/Transition.tsx";
+import ActionState from "./pages/ActionState.tsx";
 
 // Before
 // import {render} from 'react-dom';
@@ -25,6 +26,7 @@ createRoot(document.getElementById("root")!, {
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/transition" element={<Transition />} />
+        <Route path="/action-state" element={<ActionState />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
