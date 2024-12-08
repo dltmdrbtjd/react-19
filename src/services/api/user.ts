@@ -4,7 +4,7 @@ export const updateName = async (name: string): Promise<string> => {
       if (name === "error") {
         rej("Error");
       } else {
-        res("Success");
+        res(name);
       }
     }, 1000);
   });
