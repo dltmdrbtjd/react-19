@@ -9,3 +9,11 @@ export const updateName = async (name: string): Promise<string> => {
     }, 1000);
   });
 };
+
+export const getUsers = async (): Promise<string[]> => {
+  return new Promise((res) => {
+    setTimeout(() => {
+      res(["John", "Jane", "Jim"]);
+    }, 2000);
+  });
+};
