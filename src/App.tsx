@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      <NavLink to="/action">Go to Action Page</NavLink>
+      <NavLink to="/transition">Go to Transition Page</NavLink>
     </>
   );
 }

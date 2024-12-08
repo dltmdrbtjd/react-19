@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
 import { BrowserRouter, Routes, Route } from "react-router";
-import Action from "./Action.tsx";
+import Transition from "./Transition.tsx";
 
 // Before
 // import {render} from 'react-dom';
@@ -24,7 +24,7 @@ createRoot(document.getElementById("root")!, {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/action" element={<Action />} />
+        <Route path="/transition" element={<Transition />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
