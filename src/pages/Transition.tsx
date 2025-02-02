@@ -20,9 +20,20 @@ function Action() {
   };
 
   return (
-    <div>
-      <input value={name} onChange={(event) => setName(event.target.value)} />
-      <button onClick={handleSubmit} disabled={isPending}>
+    <div className="flex flex-col gap-21 3xl:bg-grey-100 2xl:bg-grey-900">
+      <input
+        value={name}
+        onChange={(event) => setName(event.target.value)}
+        className="border border-solid border-coffee-100 focus:outline-none focus:ring-1 focus:ring-coffee-200 focus:border-coffee-300 font-mono"
+      />
+      <button
+        onClick={handleSubmit}
+        disabled={isPending}
+        style={{
+          backgroundColor: isPending ? "var(--color-coffee-200)" : "",
+        }}
+        className="font-sans animate-fade-in-scale"
+      >
         Update
       </button>
       {error && <p>{error}</p>}
